@@ -2,15 +2,15 @@ import React from 'react';
 
 import HeaderPaths from "@/widgets/HeaderPaths/HeaderPaths";
 import IconPaths from "@/widgets/IconPaths/IconPaths";
+import Collapsed from "@/shared/components/Collapsed/Collapsed";
 
 import styles from './Home.module.css';
-import Collapsed from "@/shared/components/Collapsed/Collapsed";
 
 const Home = () => {
     return (
         <>
             <header className={styles.header}>
-                <img src="/main_background.jpg" alt="Фон" className={styles.background}/>
+                <img src={`${process.env.ASSET_PREFIX}/public/main_background.jpg`} alt="Фон" className={styles.background}/>
                 <nav className={styles.nav}>
                     <Collapsed
                         edge={1024}

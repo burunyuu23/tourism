@@ -1,4 +1,4 @@
-import { RouterProvider } from "react-router-dom";
+import {RouterProvider} from "react-router-dom";
 import React from "react";
 import AnimatedCursor from "react-animated-cursor";
 
@@ -14,11 +14,12 @@ const App = () => {
                 innerScale={1}
                 outerScale={2}
                 innerStyle={{
-                    backgroundColor: 'white'
+                    backgroundColor: 'white',
+                    mixBlendMode: 'difference'
                 }}
                 outerStyle={{
                     backgroundColor: '#ffffff11',
-                    // mixBlendMode: 'difference'
+                    mixBlendMode: 'difference'
                 }}
             />
             <RouterProvider router={router}/>
