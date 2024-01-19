@@ -1,0 +1,23 @@
+@import '@csstools/normalize.css';
+@import 'sanitize.css';
+
+#root {
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+ul {
+	margin: 0;
+}
+main {
+	width: 100%;
+}
+
+a {
+	color: inherit;
+}

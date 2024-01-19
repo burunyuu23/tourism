@@ -1,0 +1,20 @@
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #00000088;
+	width: 100dvw;
+	height: 100dvh;
+}
+
+.modalInner {
+	position: fixed;
+
+	left: 50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -75px;
+
+	padding: 20px;
+	background: white;
+}
