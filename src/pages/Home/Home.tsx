@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <>
             <header className={styles.header}>
-                <img src="/main_background2.jpg" alt="Фон" className={styles.background}/>
+                <img src="/main_background.jpg" alt="Фон" className={styles.background}/>
                 <nav className={styles.nav}>
                     <Collapsed
                         edge={1024}
