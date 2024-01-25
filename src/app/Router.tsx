@@ -1,10 +1,10 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
 import Home from "@/pages/Home/Home";
 import {default as DomAvseevih} from "@/pages/DomAvseevih/Page";
 import {default as SoborNeporochnogoZachatiyaPresvyatoyDeviMarii} from "@/pages/SoborNeporochnogoZachatiyaPresvyatoyDeviMarii/Page";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
         {
             path: "/dom-avseevih",
             element: <DomAvseevih/>,
@@ -17,7 +17,9 @@ const router = createHashRouter([
             path: "/",
             element: <Home/>,
         },
-    ],
+    ], {
+        basename: "/tourism"
+    }
 );
 
 export default router;
