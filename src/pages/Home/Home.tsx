@@ -11,8 +11,8 @@ const items = [
     {
         title: "Дом-усадьба Асеевых",
         address: "Тамбовская область, город Рассказово, ул. Совхозная, 1",
-        image_url: `${process.env.ASSET_PREFIX}/public/dom-avseevih/index.png`,
-        link: `${process.env.BASENAME}/dom-avseevih`,
+        image_url: `${process.env.ASSET_PREFIX}/public/dom-aseevih/index.png`,
+        link: `${process.env.BASENAME}/dom-aseevih`,
     },
     {
         title: "Собор Непорочного зачатия Пресвятой Девы Марии",

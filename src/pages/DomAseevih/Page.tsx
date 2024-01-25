@@ -8,7 +8,7 @@ const Page = () => {
     return (
         <div>
             <Header
-                imagePath={`${process.env.ASSET_PREFIX}/public/dom-avseevih/index.png`}
+                imagePath={`${process.env.ASSET_PREFIX}/public/dom-aseevih/index.png`}
                 headerText={"Усадьба Асеева (Тамбов)"}
                 helperText={<>
                     <p>

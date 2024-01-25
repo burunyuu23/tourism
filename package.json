@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "rsbuild dev --open",
     "build": "rsbuild build",
-    "preview": "rsbuild preview"
+    "preview": "rsbuild preview --open http://localhost:8080/tourism/"
   },
   "dependencies": {
     "@csstools/normalize.css": "^12.1.1",
