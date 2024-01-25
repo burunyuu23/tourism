@@ -12,7 +12,7 @@ export default defineConfig({
         },
     },
     output: {
-        assetPrefix: '.',
+        assetPrefix: '/',
         distPath: {
             image: 'assets',
             svg: 'assets',
