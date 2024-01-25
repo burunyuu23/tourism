@@ -19,7 +19,7 @@ const router = createHashRouter([
         },
     ],
     {
-        basename: "/tourism"
+        basename: new URL(document.baseURI).pathname
     }
 );
 
