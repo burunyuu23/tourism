@@ -18,7 +18,7 @@ const router = createBrowserRouter([
             element: <Home/>,
         },
     ], {
-        basename: "tourism/"
+        basename: "/tourism"
     }
 );
 
