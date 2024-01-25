@@ -1,0 +1,60 @@
+.main {
+	display: grid;
+	column-gap: 20px;
+	grid-template-columns: max-content auto;
+	justify-content: left;
+	grid-template-areas:
+	    "image title"
+	    "image address";
+}
+.main[data-right = true] {
+	grid-template-columns: auto max-content;
+	justify-content: right;
+	grid-template-areas:
+	    "title image"
+	    "address image";
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+.text[data-right = true] {
+	align-items: end;
+}
+
+.image_wrapper {
+	grid-area: image;
+	position: relative;
+}
+.image_link {
+	transition: all 500ms ease-in-out;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #ffffff, #e1a560 51%, #d7de96) var(--x, 0)/200%;
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+	mix-blend-mode: screen;
+}
+.image_link:hover{
+	--x: 100%;
+	opacity: 0.5;
+	filter: saturate(0.2);
+}
+.image {
+	object-fit: cover;
+	width: 20dvw;
+	aspect-ratio: 4/3;
+	border-radius: 40px;
+}
+
+.title {
+	margin: 0;
+	grid-area: title;
+}
+.address {
+	grid-area: address;
+}

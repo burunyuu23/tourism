@@ -1,69 +1,26 @@
-.header {
-	color: white;
-	font-family: Suisse Intl, sans-serif;
-	width: 100%;
-	padding: 20px;
-}
 
-.background {
-	position: absolute;
-	z-index: -1;
-	width: 100%;
-	height: 700px;
-	@media (max-width: 470px) {
-		height: 900px;
-	};
-	@media (max-width: 340px) {
-		height: 970px;
-	};
-	object-fit: cover;
-	transform: scale(1.2);
-	filter: blur(4px) brightness(0.5);
-}
-
-.nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	margin-bottom: 50px;
-	& ul {
-		display: flex;
-	}
-	.paths {
-		margin-left: 15%;
-		gap: 20px;
-		& li {
-			font-weight: 500;
-		}
-	}
-	.socials {
-		gap: 5px;
-	}
-}
-
-.mainBannerText {
-	margin-left: 100px;
-	word-wrap: normal;
-	width: max(400px, 40%);
-
-	@media (max-width: 1024px) {
-		margin-left: 0;
-	};
-
-	@media (max-width: 470px) {
-		width: 95%;
-	};
-
-	.headerText {
-		font-size: 4em;
-		margin: 0;
-		line-height: 1;
+.paths {
+	margin-left: 15%;
+	gap: 20px;
+	& li {
+		font-weight: 500;
 	}
 }
 
 .content {
 	background: white;
-	height: 100dvh;
-	padding: 40px;
+	height: max-content;
+	padding: 20px 120px;
+}
+
+.miniCards {
+	display: grid;
+	gap: 20px;
+}
+
+
+.usually {
+	border-radius: 40px;
+	padding: 20px;
+	border: 2px solid #e1a560;
 }

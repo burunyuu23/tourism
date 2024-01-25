@@ -3,6 +3,9 @@ import {pluginReact} from '@rsbuild/plugin-react';
 import {pluginSvgr} from "@rsbuild/plugin-svgr";
 
 export default defineConfig({
+    html: {
+        template: './public/index.html',
+    },
     source: {
         define: {
             'process.env': JSON.stringify(process.env),

@@ -9,6 +9,7 @@ body {
 	margin: 0;
 	width: 100%;
 	overflow-x: hidden;
+	font-family: Suisse Intl, sans-serif;
 }
 
 ul {
@@ -20,4 +21,7 @@ main {
 
 a {
 	color: inherit;
+}
+.link_hover:hover {
+	font-weight: bold !important;
 }
