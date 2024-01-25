@@ -12,13 +12,13 @@ const items = [
         title: "Дом-усадьба Асеевых",
         address: "Тамбовская область, город Рассказово, ул. Совхозная, 1",
         image_url: `${process.env.ASSET_PREFIX}/public/dom-aseevih/index.png`,
-        link: `${process.env.BASENAME}/dom-aseevih`,
+        link: `/dom-aseevih`,
     },
     {
         title: "Собор Непорочного зачатия Пресвятой Девы Марии",
         address: "Москва, Малая Грузинская улица, 27/13с1, метро Улица 1905 года",
         image_url: `${process.env.ASSET_PREFIX}/public/sobor-neporochnogo-zachatiya-presvyatoi-devi-marii/index.png`,
-        link: `${process.env.BASENAME}/sobor-neporochnogo-zachatiya-presvyatoi-devi-marii`,
+        link: `/sobor-neporochnogo-zachatiya-presvyatoi-devi-marii`,
     },
 ]
 

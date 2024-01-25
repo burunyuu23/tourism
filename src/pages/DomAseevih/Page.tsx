@@ -44,7 +44,7 @@ const Page = () => {
                         заслуги перед державой император Николай II в 1916 году даровал купцу дворянский титул.
                     </p>
                     <img
-                        src={`${process.env.ASSET_PREFIX}/public/dom-avseevih/1.png`}
+                        src={`${process.env.ASSET_PREFIX}/public/dom-aseevih/1.png`}
                         alt="История дома Асеевых"
                         style={{ float: "left", marginRight: 20 }}
                     />
@@ -94,7 +94,7 @@ const Page = () => {
                     <h1>
                         Что посмотреть:
                     </h1>
-                    <img src={`${process.env.ASSET_PREFIX}/public/dom-avseevih/2.png`}
+                    <img src={`${process.env.ASSET_PREFIX}/public/dom-aseevih/2.png`}
                          alt="Внутреннее убранство дома Асеевых"
                          style={{float: "right", marginLeft: 20}}
                     />

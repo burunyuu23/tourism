@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import {Place} from "@/entities/Place/model/type";
 
@@ -8,7 +9,7 @@ const PlaceMiniCard = ({ title, address, image_url, right = false, link }: Place
 
     const image = (
         <div className={styles.image_wrapper}>
-            <a href={link} className={styles.image_link}/>
+            <Link to={link} className={styles.image_link}/>
             <img src={image_url} alt={title} className={styles.image}/>
         </div>
     );
