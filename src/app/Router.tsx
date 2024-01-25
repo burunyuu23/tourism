@@ -18,9 +18,6 @@ const router = createHashRouter([
             element: <Home/>,
         },
     ],
-    {
-        basename: new URL(document.baseURI).pathname
-    }
 );
 
 export default router;
