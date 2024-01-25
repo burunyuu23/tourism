@@ -18,7 +18,7 @@ const router = createHashRouter([
             element: <Home/>,
         },
     ], {
-        basename: "/tourism"
+        basename: "tourism/"
     }
 );
 
