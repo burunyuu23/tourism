@@ -22,7 +22,7 @@ const Place = () => {
     return (
         <div>
             <Header
-                imagePath={`${process.env.ASSET_PREFIX}/${placeId}${image}`}
+                imagePath={`${process.env.ASSET_PREFIX}/public/${placeId}${image}`}
                 headerText={headerText || title}
                 helperText={<p>{helperText}</p>}
             />

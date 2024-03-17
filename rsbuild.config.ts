@@ -12,7 +12,7 @@ export default defineConfig({
         },
     },
     output: {
-        assetPrefix: '/tourism/public/',
+        assetPrefix: '/tourism/',
         distPath: {
             image: 'assets',
             svg: 'assets',

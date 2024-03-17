@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <>
             <Header
-                imagePath={`${process.env.ASSET_PREFIX}/main_background.jpg`}
+                imagePath={`${process.env.ASSET_PREFIX}/public/main_background.jpg`}
                 menu={<Collapsed
                     edge={1024}
                     collapsedSlot={<br/>}
