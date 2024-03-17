@@ -33,7 +33,7 @@ const Place = () => {
                         {paragraphs.map(({ text, image, imageStyle }) => (
                             <>
                                 {text && (<p>{text}</p>)}
-                                {image && (<img src={`/${placeId}${image}`} alt="photo" style={imageStyle as CSSProperties || {}} />)}
+                                {image && (<img src={`${process.env.ASSET_PREFIX}/public/${placeId}${image}`} alt="photo" style={imageStyle as CSSProperties || {}} />)}
                             </>
                         ))}
                     </article>

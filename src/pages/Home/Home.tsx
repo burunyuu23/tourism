@@ -4,12 +4,12 @@ import HeaderPaths from "@/widgets/HeaderPaths/HeaderPaths";
 import Collapsed from "@/shared/components/Collapsed/Collapsed";
 import PlaceMiniCard from "@/entities/Place/ui/PlaceMiniCard";
 import Header from "@/shared/components/Header/Header";
-import {getPlaces} from "@/entities/Place/data/places";
+import {getDistricts} from "@/entities/Place/data/places";
 
 import styles from './Home.module.css';
 
 const Home = () => {
-    const district = getPlaces();
+    const district = getDistricts();
     return (
         <>
             <Header
