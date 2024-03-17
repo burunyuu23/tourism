@@ -1,4 +1,5 @@
 import React, {ReactNode} from 'react';
+import {Link} from "react-router-dom";
 
 import IconPaths from "@/widgets/IconPaths/IconPaths";
 
@@ -16,6 +17,7 @@ const Header = ({ menu, headerText, helperText, imagePath }: HeaderProps) => {
         <header className={styles.header}>
             <img src={imagePath} alt="Фон" className={styles.background}/>
             <nav className={styles.nav}>
+                <Link to="/">На Главную</Link>
                 <div style={{ display: "flex", flex: 1 }}>
                     {menu}
                 </div>

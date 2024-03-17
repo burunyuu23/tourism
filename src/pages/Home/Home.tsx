@@ -4,29 +4,16 @@ import HeaderPaths from "@/widgets/HeaderPaths/HeaderPaths";
 import Collapsed from "@/shared/components/Collapsed/Collapsed";
 import PlaceMiniCard from "@/entities/Place/ui/PlaceMiniCard";
 import Header from "@/shared/components/Header/Header";
+import {getPlaces} from "@/entities/Place/data/places";
 
 import styles from './Home.module.css';
 
-const items = [
-    {
-        title: "Дом-усадьба Асеевых",
-        address: "Тамбовская область, город Рассказово, ул. Совхозная, 1",
-        image_url: `${process.env.ASSET_PREFIX}/public/dom-aseevih/index.png`,
-        link: `/dom-aseevih`,
-    },
-    {
-        title: "Собор Непорочного зачатия Пресвятой Девы Марии",
-        address: "Москва, Малая Грузинская улица, 27/13с1, метро Улица 1905 года",
-        image_url: `${process.env.ASSET_PREFIX}/public/sobor-neporochnogo-zachatiya-presvyatoi-devi-marii/index.png`,
-        link: `/sobor-neporochnogo-zachatiya-presvyatoi-devi-marii`,
-    },
-]
-
 const Home = () => {
+    const district = getPlaces();
     return (
         <>
             <Header
-                imagePath={`${process.env.ASSET_PREFIX}/public/main_background.jpg`}
+                imagePath={`${process.env.ASSET_PREFIX}/main_background.jpg`}
                 menu={<Collapsed
                     edge={1024}
                     collapsedSlot={<br/>}
@@ -80,22 +67,27 @@ const Home = () => {
                         Правительство также
                         ввело безвизовый въезд для посетителей из некоторых стран, что облегчило туристам посещение России.</p>
                 </section>
-                <hr/>
-
-                <section id="Центр">
-                    <h1>Центральный Федеральный округ (ЦФО)</h1>
-                    <div className={styles.miniCards}>
-                        {items.map((item, index) => (
-                            <div key={index} className={styles.usually}>
-                                <PlaceMiniCard
-                                    {...item}
-                                    right={!!(index % 2)}
-                                />
-                            </div>
-                        ))}
+                {district.map(({id, title, places}) => (
+                    <>
                         <hr/>
-                    </div>
-                </section>
+                        <section id={id}>
+                            <h1>{title || id}</h1>
+                            <div className={styles.miniCards}>
+                                {places.map(({id, image, address, title}, index) => (
+                                    <div key={index} className={styles.usually}>
+                                        <PlaceMiniCard
+                                            title={title}
+                                            address={address}
+                                            image_url={image}
+                                            link={`/${id}`}
+                                            right={!!(index % 2)}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    </>
+                ))}
             </div>
         </>
     );

@@ -1,4 +1,5 @@
-import {useState} from "react";
+import {getPlaces} from "@/entities/Place/data/places";
+import {memo, useCallback} from "react";
 
 const items = [
     "Центр",
@@ -9,11 +10,11 @@ const items = [
     "Урал",
     "Дальний Восток",
     "Северо-Кавказ",
-]
+];
 
-const HeaderPaths = () => {
-    const [active, setActive] = useState<number>(-1)
-    const scrollToById = (id: string | number) => {
+const HeaderPaths = memo(() => {
+    const district = getPlaces();
+    const scrollToById = useCallback((id: string | number) => {
         const element = document.getElementById(`${id}`);
         const headerHeight = document.getElementById('Header')?.offsetHeight ?? 0;
 
@@ -23,17 +24,17 @@ const HeaderPaths = () => {
                 behavior: 'smooth',
             });
         }
-    };
+    }, []);
 
     return (
         <>
-            {items.map((item, index) => (
-                <li onClick={() => scrollToById(item)} className="link_hover">
-                    { item }
+            {district.map(({ id }) => (
+                <li onClick={() => scrollToById(id)} className="link_hover">
+                    { id }
                 </li>
             ))}
         </>
     );
-};
+});
 
 export default HeaderPaths;
