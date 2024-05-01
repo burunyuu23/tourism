@@ -10,7 +10,7 @@ const PlaceMiniCard = ({ title, address, image_url, right = false, link }: Place
     const image = (
         <div className={styles.image_wrapper}>
             <Link to={link} className={styles.image_link}/>
-            <img src={link + image_url} alt={title} className={styles.image}/>
+            <img src={`${process.env.ASSET_PREFIX}/public/${link}${image_url}`} alt={title} className={styles.image}/>
         </div>
     );
 

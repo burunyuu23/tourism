@@ -1,7 +1,8 @@
-import places from "./data.json";
+import districts from "./data.json";
 
-export const getPlaces = () => places;
+export const getDistricts = () => districts;
+export const getDistrictById = (id?: string) => districts.find(({id: placeId}) => placeId === id);
 
-export const getPlaceById = (districtId?: string, placeId?: string) => places.find(({ id}) => districtId === id)?.places.find(({ id }) => id === placeId);
+export const getAllPlaces = () => districts.flatMap((district) => district.places);
+export const getPlaceById = (placeId?: string) => getAllPlaces().find(({ id }) => id === placeId);
 
-export const getDistrictById = (id?: string) => places.find(({id: placeId}) => placeId === id);

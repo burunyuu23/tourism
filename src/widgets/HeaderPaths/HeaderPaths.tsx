@@ -1,4 +1,4 @@
-import {getPlaces} from "@/entities/Place/data/places";
+import {getDistricts} from "@/entities/Place/data/places";
 import {memo, useCallback} from "react";
 
 const items = [
@@ -13,7 +13,7 @@ const items = [
 ];
 
 const HeaderPaths = memo(() => {
-    const district = getPlaces();
+    const district = getDistricts();
     const scrollToById = useCallback((id: string | number) => {
         const element = document.getElementById(`${id}`);
         const headerHeight = document.getElementById('Header')?.offsetHeight ?? 0;

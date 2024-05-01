@@ -4,6 +4,7 @@ import AnimatedCursor from "react-animated-cursor";
 
 import router from "./Router";
 import './App.css';
+import AppRouter from "./Router";
 
 const App = () => {
     return (
@@ -22,7 +23,7 @@ const App = () => {
                     mixBlendMode: 'difference'
                 }}
             />
-            <RouterProvider router={router}/>
+            <AppRouter />
         </main>
     );
 };
