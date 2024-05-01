@@ -32,7 +32,7 @@ const Place = () => {
                         <h1>{header}</h1>
                         {paragraphs.map(({ text, image, style }) => (
                             <>
-                                {text && (<p style={style as CSSProperties || {}}>{text}</p>)}
+                                {text && (<p className={styles.p} style={style as CSSProperties || {}}>{text}</p>)}
                                 {image && (<img src={`${process.env.ASSET_PREFIX}/public/${placeId}${image}`} alt="photo" style={style as CSSProperties || {}} />)}
                             </>
                         ))}

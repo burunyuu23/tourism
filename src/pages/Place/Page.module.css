@@ -3,3 +3,7 @@
 	height: max-content;
 	padding: 20px 120px;
 }
+
+.p {
+	white-space: pre-line;
+}
