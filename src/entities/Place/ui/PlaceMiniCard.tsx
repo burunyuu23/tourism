@@ -5,12 +5,12 @@ import {Place} from "@/entities/Place/model/type";
 
 import styles from './PlaceMiniCard.module.css';
 
-const PlaceMiniCard = ({ title, address, image_url, right = false, link }: Place & { right?: boolean; link: string }) => {
+const PlaceMiniCard = ({ title, address, right = false, link }: Place & { right?: boolean; link: string }) => {
 
     const image = (
         <div className={styles.image_wrapper}>
             <Link to={link} className={styles.image_link}/>
-            <img src={`${process.env.ASSET_PREFIX}/public/${link}${image_url}`} alt={title} className={styles.image}/>
+            <img src={`${process.env.ASSET_PREFIX}/public/${link}/index.png`} alt={title} className={styles.image}/>
         </div>
     );
 

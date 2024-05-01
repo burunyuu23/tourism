@@ -67,20 +67,19 @@ const Home = () => {
                         Правительство также
                         ввело безвизовый въезд для посетителей из некоторых стран, что облегчило туристам посещение России.</p>
                 </section>
-                {district.map(({id, title, places}) => (
+                {district.map(({id, title, places}, districtIndex) => (
                     <>
                         <hr/>
                         <section id={id}>
                             <h1>{title || id}</h1>
                             <div className={styles.miniCards}>
-                                {places.map(({id, image, address, title}, index) => (
+                                {places.map(({id, address, title}, index) => (
                                     <div key={index} className={styles.usually}>
                                         <PlaceMiniCard
                                             title={title}
                                             address={address}
-                                            image_url={image}
                                             link={`/${id}`}
-                                            right={!!(index % 2)}
+                                            right={!!((districtIndex + index) % 2)}
                                         />
                                     </div>
                                 ))}

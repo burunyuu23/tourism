@@ -17,12 +17,12 @@ const Place = () => {
             </div>
         );
     }
-    const { title, image, headerText, helperText, articles } = place;
+    const { title, headerText, helperText, articles } = place;
 
     return (
         <div>
             <Header
-                imagePath={`${process.env.ASSET_PREFIX}/public/${placeId}${image}`}
+                imagePath={`${process.env.ASSET_PREFIX}/public/${placeId}/index.png`}
                 headerText={headerText || title}
                 helperText={<p>{helperText}</p>}
             />
@@ -30,10 +30,10 @@ const Place = () => {
                 {articles.map(({ header, paragraphs }) => (
                     <article>
                         <h1>{header}</h1>
-                        {paragraphs.map(({ text, image, imageStyle }) => (
+                        {paragraphs.map(({ text, image, style }) => (
                             <>
-                                {text && (<p>{text}</p>)}
-                                {image && (<img src={`${process.env.ASSET_PREFIX}/public/${placeId}${image}`} alt="photo" style={imageStyle as CSSProperties || {}} />)}
+                                {text && (<p style={style as CSSProperties || {}}>{text}</p>)}
+                                {image && (<img src={`${process.env.ASSET_PREFIX}/public/${placeId}${image}`} alt="photo" style={style as CSSProperties || {}} />)}
                             </>
                         ))}
                     </article>
